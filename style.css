@@ -1,0 +1,112 @@
+/* DO NOT MODIFY */
+/* DO NOT MODIFY */
+/* DO NOT MODIFY */
+
+:root {
+  --primary: #ff5964;
+  --secondary: #35a7ff;
+  --terciary: #ffe74c;
+  --complementary: #474747;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: large;
+}
+
+.exercise-wrapper {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #474747;
+  border-radius: 10px;
+  padding: 10em 0;
+}
+
+.note {
+  color: var(--primary);
+}
+
+.extra-points {
+  color: var(--secondary);
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+  background-color: var(--primary);
+}
+
+.circle {
+  aspect-ratio: 1 / 1;
+  background-color: var(--complementary);
+  border-radius: 50%;
+}
+
+.rectangle {
+  aspect-ratio: 2 / 1;
+  background-color: var(--secondary);
+}
+
+.triangle {
+  aspect-ratio: 1 / 1;
+  background-color: var(--terciary);
+  overflow: hidden;
+}
+
+.triangle::before {
+  display: inline-block;
+  border-top-left-radius: solid 50% black;
+  content: "";
+  width: 100%;
+  height: 150%;
+  background-color: white;
+  transform: translateY(calc(-100% / 6)) rotate(45deg) translate(-50%);
+}
+
+figure {
+  cursor: pointer;
+}
+
+/* Ex1 */
+.ex1 figure {
+  width: 20em;
+}
+
+/* Ex2 */
+.ex2 figure {
+  width: 6em;
+}
+
+.square:nth-of-type(3):hover ~ .circle {
+  background-color: var(--secondary);
+}
+
+/* Ex3 */
+
+.ex3 .squares,
+.ex3 .rectangles {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ex3 figure {
+  width: 20em;
+}
+
+.ex3 {
+  padding: 0;
+}
+
+.exercise-wrapper.ex3 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.squares figure.square {
+  background-color: var(--complementary);
+}
+
+.rectangles figure.rectangle {
+  background-color: var(--complementary);
+}
